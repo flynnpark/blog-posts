@@ -7,6 +7,7 @@ tags:
   - markdown
   - sample
 ---
+
 # An h1 header
 
 Paragraphs are separated by a blank line.
@@ -35,9 +36,9 @@ Unicode is supported. ☺
 
 Here's a numbered list:
 
-1. first item
-2. second item
-3. third item
+1.  first item
+2.  second item
+3.  third item
 
 Note again how the actual text starts at 4 columns in (4 characters
 from the left side). Here's a code sample:
@@ -72,23 +73,23 @@ for i in range(10):
 
 Now a nested list:
 
-1. First, get these ingredients:
-   * carrots
-   * celery
-   * lentils
-2. Boil some water.
-3. Dump everything in the pot and follow
-   this algorithm:
-   ```
-   find wooden spoon
-   uncover pot
-   stir
-   cover pot
-   balance wooden spoon precariously on pot handle
-   wait 10 minutes
-   goto first step (or shut off burner when done)
-   ```
-   Do not bump wooden spoon or it will fall.
+1.  First, get these ingredients:
+    * carrots
+    * celery
+    * lentils
+2.  Boil some water.
+3.  Dump everything in the pot and follow
+    this algorithm:
+    ```
+    find wooden spoon
+    uncover pot
+    stir
+    cover pot
+    balance wooden spoon precariously on pot handle
+    wait 10 minutes
+    goto first step (or shut off burner when done)
+    ```
+    Do not bump wooden spoon or it will fall.
 
 Notice again how text always lines up on 4-space indents (including
 that last line which continues item 3 above).
@@ -101,47 +102,47 @@ doc](#an-h2-header). Here's a footnote \[^1].
 
 Tables can look like this:
 
-size  material      color
+size material color
 
-- - -
+---
 
-9     leather       brown
-10    hemp canvas   natural
-11    glass         transparent
+9 leather brown
+10 hemp canvas natural
+11 glass transparent
 
 Table: Shoes, their sizes, and what they're made of
 
 (The above is the caption for the table.) Pandoc also supports
 multi-line tables:
 
-- - -
+---
 
-keyword   text
+keyword text
 
-- - -
+---
 
-red       Sunsets, apples, and
-          other red or reddish
-          things.
+red Sunsets, apples, and
+other red or reddish
+things.
 
-green     Leaves, grass, frogs
-          and other things it's
-          not easy being.
+green Leaves, grass, frogs
+and other things it's
+not easy being.
 
-- - -
+---
 
 A horizontal rule follows.
 
-- - -
+---
 
 Here's a definition list:
 
 apples
-  : Good for making applesauce.
+: Good for making applesauce.
 oranges
-  : Citrus!
+: Citrus!
 tomatoes
-  : There's no "e" in tomatoe.
+: There's no "e" in tomatoe.
 
 Again, text is indented 4 spaces. (Put a blank line between each
 term/definition pair to spread things out more.)
@@ -149,12 +150,12 @@ term/definition pair to spread things out more.)
 Here's a "line block":
 
 \| Line one
-|   Line too
+| Line too
 | Line tree
 
 and images can be specified like so:
 
-![example image](/contents/media/test.jpg)
+![example image](/contents/images/test.jpg)
 
 Inline math equations go in like so: $\omega = d\phi / dt$. Display
 math should get its own line and be put in in double-dollarsigns:
