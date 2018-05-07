@@ -1,6 +1,7 @@
 ---
 title: Markdown Sample
 date: '2018-04-16'
+cover: '../images/test.jpg'
 tags:
   - test
   - dev
