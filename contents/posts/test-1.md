@@ -9,159 +9,240 @@ tags:
   - sample
 ---
 
-# An h1 header
+---
 
-Paragraphs are separated by a blank line.
+**Advertisement :)**
 
-2nd paragraph. _Italic_, **bold**, and `monospace`. Itemized lists
-look like:
+* **[pica](https://nodeca.github.io/pica/demo/)** - high quality and fast image
+  resize in browser.
+* **[babelfish](https://github.com/nodeca/babelfish/)** - developer friendly
+  i18n with plurals support and easy syntax.
 
-* this one
-* that one
-* the other one
+You will like those projects!
 
-Note that --- not considering the asterisk --- the actual text
-content starts at 4-columns in.
+---
 
-> Block quotes are
-> written like so.
+# h1 Heading 8-)
+
+## h2 Heading
+
+### h3 Heading
+
+#### h4 Heading
+
+##### h5 Heading
+
+###### h6 Heading
+
+## Horizontal Rules
+
+---
+
+---
+
+---
+
+## Typographic replacements
+
+Enable typographer option to see result.
+
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+
+test.. test... test..... test?..... test!....
+
+!!!!!! ???? ,, -- ---
+
+"Smartypants, double quotes" and 'single quotes'
+
+## Emphasis
+
+**This is bold text**
+
+**This is bold text**
+
+_This is italic text_
+
+_This is italic text_
+
+~~Strikethrough~~
+
+## Blockquotes
+
+> Blockquotes can also be nested...
 >
-> They can span multiple paragraphs,
-> if you like.
+> > ...by using additional greater-than signs right next to each other...
+> >
+> > > ...or with spaces between arrows.
 
-Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., "it's all
-in chapters 12--14"). Three dots ... will be converted to an ellipsis.
-Unicode is supported. ☺
+## Lists
 
-## An h2 header
+Unordered
 
-Here's a numbered list:
+* Create a list by starting a line with `+`, `-`, or `*`
 
-1.  first item
-2.  second item
-3.  third item
+* Sub-lists are made by indenting 2 spaces:
 
-Note again how the actual text starts at 4 columns in (4 characters
-from the left side). Here's a code sample:
+  * Marker character change forces new list start:
+    * Ac tristique libero volutpat at
+    - Facilisis in pretium nisl aliquet
+    * Nulla volutpat aliquam velit
+
+* Very easy!
+
+Ordered
+
+1.  Lorem ipsum dolor sit amet
+2.  Consectetur adipiscing elit
+3.  Integer molestie lorem at massa
+
+1)  You can use sequential numbers...
+1)  ...or keep all the numbers as `1.`
+
+Start numbering with offset:
+
+57. foo
+1.  bar
+
+## Code
+
+Inline `code`
+
+Indented code
+
+    // Some comments
+    line 1 of code
+    line 2 of code
+    line 3 of code
+
+Block code "fences"
 
 ```
-# Let me re-iterate ...
-for i in 1 .. 10 { do-something(i) }
+Sample text here...
 ```
 
-As you probably guessed, indented 4 spaces. By the way, instead of
-indenting the block, you can use delimited blocks, if you like:
+Syntax highlighting
 
-```
-define foobar() {
-    print "Welcome to flavor country!";
-}
-```
+```js
+var foo = function(bar) {
+  return bar++;
+};
 
-(which makes copying & pasting easier). You can optionally mark the
-delimited block for Pandoc to syntax highlight it:
-
-```python
-import time
-# Quick, count to ten!
-for i in range(10):
-    # (but not *too* quick)
-    time.sleep(0.5)
-    print i
+console.log(foo(5));
 ```
 
-### An h3 header
+## Tables
 
-Now a nested list:
+| Option | Description                                                               |
+| ------ | ------------------------------------------------------------------------- |
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default.    |
+| ext    | extension to be used for dest files.                                      |
 
-1.  First, get these ingredients:
-    * carrots
-    * celery
-    * lentils
-2.  Boil some water.
-3.  Dump everything in the pot and follow
-    this algorithm:
-    ```
-    find wooden spoon
-    uncover pot
-    stir
-    cover pot
-    balance wooden spoon precariously on pot handle
-    wait 10 minutes
-    goto first step (or shut off burner when done)
-    ```
-    Do not bump wooden spoon or it will fall.
+Right aligned columns
 
-Notice again how text always lines up on 4-space indents (including
-that last line which continues item 3 above).
+| Option |                                                               Description |
+| -----: | ------------------------------------------------------------------------: |
+|   data | path to data files to supply the data that will be passed into templates. |
+| engine |    engine to be used for processing templates. Handlebars is the default. |
+|    ext |                                      extension to be used for dest files. |
 
-Here's a link to [a website](http://foo.bar), to a [local
-doc](local-doc.html), and to a [section heading in the current
-doc](#an-h2-header). Here's a footnote \[^1].
+## Links
 
-\[^1]: Footnote text goes here.
+[link text](http://dev.nodeca.com)
 
-Tables can look like this:
+[link with title](http://nodeca.github.io/pica/demo/ 'title text!')
 
-size material color
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
----
+## Images
 
-9 leather brown
-10 hemp canvas natural
-11 glass transparent
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg 'The Stormtroopocat')
 
-Table: Shoes, their sizes, and what they're made of
+Like links, Images also have a footnote style syntax
 
-(The above is the caption for the table.) Pandoc also supports
-multi-line tables:
+![Alt text][id]
 
----
+With a reference later in the document defining the URL location:
 
-keyword text
+[id]: https://octodex.github.com/images/dojocat.jpg 'The Dojocat'
 
----
+## Plugins
 
-red Sunsets, apples, and
-other red or reddish
-things.
+The killer feature of `markdown-it` is very effective support of
+[syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
 
-green Leaves, grass, frogs
-and other things it's
-not easy being.
+### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
 
----
+> Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
+>
+> Shortcuts (emoticons): :-) :-( 8-) ;)
 
-A horizontal rule follows.
+see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
 
----
+### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
 
-Here's a definition list:
+* 19^th^
+* H~2~O
 
-apples
-: Good for making applesauce.
-oranges
-: Citrus!
-tomatoes
-: There's no "e" in tomatoe.
+### [\<ins>](https://github.com/markdown-it/markdown-it-ins)
 
-Again, text is indented 4 spaces. (Put a blank line between each
-term/definition pair to spread things out more.)
+++Inserted text++
 
-Here's a "line block":
+### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
 
-\| Line one
-| Line too
-| Line tree
+==Marked text==
 
-and images can be specified like so:
+### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
 
-![](../images/test.jpg)
+Footnote 1 link[^first].
 
-Inline math equations go in like so: $\omega = d\phi / dt$. Display
-math should get its own line and be put in in double-dollarsigns:
+Footnote 2 link[^second].
 
-$$I = \int \rho R^{2} dV$$
+Inline footnote^[Text of inline footnote] definition.
 
-And note that you can backslash-escape any punctuation characters
-which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.
+Duplicated footnote reference[^second].
+
+[^first]: Footnote **can have markup**
+
+  and multiple paragraphs.
+
+[^second]: Footnote text.
+
+### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
+
+Term 1
+
+: Definition 1
+with lazy continuation.
+
+Term 2 with _inline markup_
+
+: Definition 2
+
+        { some code, part of Definition 2 }
+
+    Third paragraph of definition 2.
+
+_Compact style:_
+
+Term 1
+~ Definition 1
+
+Term 2
+~ Definition 2a
+~ Definition 2b
+
+### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
+
+This is HTML abbreviation example.
+
+It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
+
+\*[HTML]: Hyper Text Markup Language
+
+### [Custom containers](https://github.com/markdown-it/markdown-it-container)
+
+::: warning
+_here be dragons_
+:::
